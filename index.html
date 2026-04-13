@@ -3,111 +3,508 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal portfolio website showcasing projects, skills, and contact information." />
-  <title>Parag Khuman | Portfolio</title>
+  <meta name="description" content="Parag Khuman – Senior DevOps Engineer. Platform Engineering, SRE, DevSecOps, AWS, Kubernetes, Terraform." />
+  <title>Parag Khuman | Senior DevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">Parag Khuman</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a class="brand" href="#home">
+        <span class="prompt-char">~/</span>parag
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#skills">skills</a>
+        <a href="#certifications">certs</a>
+        <a href="#education">education</a>
+        <a href="#contact">contact</a>
+        <a class="nav-resume" href="Parag_Khuman_Resume.pdf" target="_blank" rel="noopener">resume.pdf ↗</a>
       </nav>
     </div>
   </header>
 
   <main>
+
+    <!-- ░░ HERO ░░ -->
     <section class="hero" id="home">
-      <div class="container hero-content">
-        <p class="eyebrow">Hi, I’m</p>
-        <h1>Parag Khuman</h1>
-        <p class="hero-text">A passionate developer building responsive websites and modern digital experiences.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">View Work</a>
-          <a class="button button-secondary" href="#contact">Contact Me</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container grid-2">
-        <div>
-          <h2>About Me</h2>
-          <p>I create polished, user-focused websites with clean design and strong performance. I enjoy working on personal branding, portfolio sites, and small business web experiences.</p>
-          <p>My focus is on responsive front-end development, smooth animations, and code that is easy to maintain.</p>
-        </div>
-        <div class="about-card">
-          <p><strong>Location:</strong> India</p>
-          <p><strong>Experience:</strong> Web Development, UI/UX, Responsive Design</p>
-          <p><strong>Interests:</strong> JavaScript, CSS, accessibility, fast-loading sites</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="projects">
+      <div class="hero-bg-grid"></div>
       <div class="container">
-        <div class="section-heading">
-          <h2>Featured Projects</h2>
-          <p>Some recent work that demonstrates design, development, and clean implementation.</p>
+        <div class="terminal-window reveal">
+          <div class="terminal-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="terminal-title">parag@devops: ~</span>
+          </div>
+          <div class="terminal-body">
+            <p class="t-line"><span class="t-prompt">$</span> <span id="cmd1" class="t-cmd"></span><span class="t-cursor" id="cur1">▋</span></p>
+            <div class="t-output" id="out1">
+              <div class="hero-name-block">
+                <p class="hero-eyebrow">Senior DevOps Engineer</p>
+                <h1 class="hero-name">Parag Khuman</h1>
+                <p class="hero-tagline">Platform Engineering &nbsp;·&nbsp; SRE &nbsp;·&nbsp; DevSecOps &nbsp;·&nbsp; Cloud Infrastructure</p>
+              </div>
+            </div>
+            <p class="t-line" id="line2" style="display:none"><span class="t-prompt">$</span> <span id="cmd2" class="t-cmd"></span><span class="t-cursor" id="cur2">▋</span></p>
+            <div class="t-output badge-row" id="out2">
+              <span class="badge">AWS</span>
+              <span class="badge">Kubernetes</span>
+              <span class="badge">Terraform</span>
+              <span class="badge">ArgoCD</span>
+              <span class="badge">Grafana</span>
+              <span class="badge">Docker</span>
+              <span class="badge">GitHub Actions</span>
+              <span class="badge">DevSecOps</span>
+            </div>
+            <p class="t-line idle-line" id="line3" style="display:none"><span class="t-prompt">$</span> <span class="t-cursor-blink">▋</span></p>
+          </div>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>A modern portfolio site built with HTML, CSS, and JavaScript to present projects and contact details clearly.</p>
-          </article>
-          <article class="project-card">
-            <h3>Marketing Landing Page</h3>
-            <p>Responsive landing page with strong branding, mobile-first layout, and smooth section transitions.</p>
-          </article>
-          <article class="project-card">
-            <h3>Interactive Resume</h3>
-            <p>A clean, digital resume design with accessible typography and fast loading performance.</p>
-          </article>
+        <div class="hero-actions reveal-delay">
+          <a class="button button-primary" href="#experience">View Experience</a>
+          <a class="button button-ghost" href="#contact">Hire Me</a>
+          <a class="button button-outline" href="Parag_Khuman_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
         </div>
       </div>
     </section>
 
+    <!-- ░░ STATS ░░ -->
+    <section class="stats-bar">
+      <div class="container stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-num" data-target="4">0</span><span class="stat-num">+</span>
+          <span class="stat-label">Years at Amazon</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-target="70">0</span><span class="stat-num">+</span>
+          <span class="stat-label">Repos Migrated</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-target="80">0</span><span class="stat-num">%</span>
+          <span class="stat-label">Manual Work Automated</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-target="45">0</span><span class="stat-num">%</span>
+          <span class="stat-label">Ticket Reduction</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num">2×</span>
+          <span class="stat-label">AWS Excellence Awards</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ ABOUT ░░ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// about</span>
+          <h2>Who Am I</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm a <strong>Senior DevOps &amp; Platform Engineer</strong> with 4+ years of experience building and scaling cloud infrastructure at <strong>Amazon AWS</strong>, <strong>Amazon Music</strong>, and <strong>Fospha</strong>.</p>
+            <p>I specialize in automating everything — from CI/CD pipelines and security remediations to data processing workflows — so engineering teams ship faster and sleep soundly.</p>
+            <p>Currently leading a Platform Engineering team at Fospha while pursuing a <strong>Ph.D in Computer Science &amp; Engineering</strong> at Lovely Professional University.</p>
+          </div>
+          <div class="about-cards reveal-delay">
+            <div class="info-card">
+              <span class="info-label">Location</span>
+              <span class="info-value">Mumbai, India</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Focus</span>
+              <span class="info-value">DevSecOps · SRE · Platform Eng</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Cloud</span>
+              <span class="info-value">AWS · Azure</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Research</span>
+              <span class="info-value">Ph.D CSE @ LPU — CGPA 9.29</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Phone</span>
+              <span class="info-value">+91-8419980735</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ EXPERIENCE ░░ -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// experience</span>
+          <h2>Career Timeline</h2>
+        </div>
+        <div class="timeline">
+
+          <div class="timeline-item reveal">
+            <div class="timeline-track">
+              <div class="timeline-dot current"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Nov 2024 – Present</span>
+                <span class="tl-badge current">Current</span>
+              </div>
+              <h3>Senior DevOps Engineer</h3>
+              <p class="tl-company">Fospha &nbsp;·&nbsp; Mumbai</p>
+              <ul class="tl-points">
+                <li>Led a team of 3 Platform and Support Engineers</li>
+                <li>Automated CloudSecOps remediations — achieved <strong>ISO 27001 Certification</strong></li>
+                <li>Built DB cloning &amp; data processing pipeline, automating <strong>80% of manual effort</strong> via Step Functions, Aurora Postgres, Fivetran, DynamoDB, SNS, SES, Slack SDK &amp; DBT</li>
+                <li>Implemented Fospha MCP Server &amp; LLMOps observability with self-hosted Langfuse</li>
+                <li>Migrated <strong>70+ repos</strong> from Bitbucket Pipelines to GitHub Actions</li>
+                <li>Automated Sonarqube remediations via ECS, EventBridge &amp; AWS Bedrock</li>
+                <li>Full Terraform IaC: VPC, routing, Aurora Postgres, ALB, Tailscale VPN, Langfuse</li>
+                <li>Implemented WAF, GuardDuty, AWS Inspector, Security Hub</li>
+                <li>Telemetry &amp; alerting via Grafana with infinity plugins for Sonarqube compliance tracking</li>
+              </ul>
+              <div class="tl-tags">
+                <span>Terraform</span><span>GitHub Actions</span><span>AWS Bedrock</span>
+                <span>Langfuse</span><span>ArgoCD</span><span>Tailscale</span>
+                <span>Grafana</span><span>Aurora Postgres</span><span>DevSecOps</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-track">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Apr 2024 – Nov 2024</span>
+              </div>
+              <h3>Software Development Engineer</h3>
+              <p class="tl-company">Amazon Music &nbsp;·&nbsp; Bengaluru</p>
+              <ul class="tl-points">
+                <li>Enhanced ElasticSearch backend for geo-location and genre-indexed queries</li>
+                <li>Led migration from NetScaler to L4 Load Balancer for <strong>14+ microservices</strong></li>
+                <li>Migrated to OpenSearch with sidecar logging and managed stress testing</li>
+                <li>Designed ticket triaging &amp; routing system, reducing resolution time by <strong>35%</strong></li>
+              </ul>
+              <div class="tl-tags">
+                <span>ElasticSearch</span><span>OpenSearch</span><span>Microservices</span>
+                <span>L4 Load Balancer</span><span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-track">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Jun 2020 – Apr 2024</span>
+              </div>
+              <h3>Data Center Automation Engineer</h3>
+              <p class="tl-company">Amazon AWS &nbsp;·&nbsp; Mumbai</p>
+              <ul class="tl-points">
+                <li>Built Throughput dashboards <strong>globally adopted</strong> by TNT teams</li>
+                <li>Designed ticket triaging system reducing <strong>45% of tickets</strong> before reaching techs</li>
+                <li>Deployed Python automation scripts via Ansible-like internal platforms</li>
+                <li>Built Procurement Management System for FinOps team</li>
+                <li>Led physical deployment of CloudFront Edge Network in Chennai &amp; Hyderabad</li>
+                <li>Led Operational Excellence team for ap-south-1c data center operations</li>
+              </ul>
+              <div class="tl-tags">
+                <span>Python</span><span>Ansible</span><span>AWS</span>
+                <span>On-Prem</span><span>FinOps</span><span>CloudFront</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SKILLS ░░ -->
     <section class="section" id="skills">
       <div class="container">
-        <div class="section-heading">
-          <h2>Skills</h2>
-          <p>Technologies and tools I use to build websites and digital experiences.</p>
+        <div class="section-header reveal">
+          <span class="section-tag">// skills</span>
+          <h2>Tech Stack</h2>
         </div>
-        <div class="skill-grid">
-          <div class="skill-item">HTML</div>
-          <div class="skill-item">CSS</div>
-          <div class="skill-item">JavaScript</div>
-          <div class="skill-item">Responsive Design</div>
-          <div class="skill-item">Git & GitHub</div>
-          <div class="skill-item">Web Performance</div>
+        <div class="skills-container">
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title">
+              <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              DevOps &amp; Tools
+            </h3>
+            <div class="skill-chips">
+              <span class="chip">GitOps</span><span class="chip">Terraform</span>
+              <span class="chip">Ansible</span><span class="chip">Kubernetes</span>
+              <span class="chip">Docker</span><span class="chip">ArgoCD</span>
+              <span class="chip">Helm</span><span class="chip">GitHub Actions</span>
+              <span class="chip">Sonarqube</span><span class="chip">Trivy</span>
+              <span class="chip">Tailscale</span><span class="chip">CI/CD</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title">
+              <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Observability
+            </h3>
+            <div class="skill-chips">
+              <span class="chip">Prometheus</span><span class="chip">Grafana</span>
+              <span class="chip">Loki</span><span class="chip">Promtail</span>
+              <span class="chip">ELK Stack</span><span class="chip">CloudWatch</span>
+              <span class="chip">Langfuse</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title">
+              <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              Cloud &amp; Infrastructure
+            </h3>
+            <div class="skill-chips">
+              <span class="chip">AWS</span><span class="chip">Azure</span>
+              <span class="chip">API Gateway</span><span class="chip">AWS AppSync</span>
+              <span class="chip">Step Functions</span><span class="chip">ECS</span>
+              <span class="chip">Aurora Postgres</span><span class="chip">DynamoDB</span>
+              <span class="chip">ALB</span><span class="chip">CloudFront</span>
+              <span class="chip">EventBridge</span><span class="chip">Bedrock</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title">
+              <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Security
+            </h3>
+            <div class="skill-chips">
+              <span class="chip">DevSecOps</span><span class="chip">WAF</span>
+              <span class="chip">GuardDuty</span><span class="chip">AWS Inspector</span>
+              <span class="chip">Security Hub</span><span class="chip">ISO 27001</span>
+              <span class="chip">Trivy</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title">
+              <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Programming
+            </h3>
+            <div class="skill-chips">
+              <span class="chip">Python</span><span class="chip">TypeScript</span>
+              <span class="chip">Bash/Shell</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title">
+              <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              Data &amp; Databases
+            </h3>
+            <div class="skill-chips">
+              <span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
+              <span class="chip">ElasticSearch</span><span class="chip">OpenSearch</span>
+              <span class="chip">DBT</span><span class="chip">Fivetran</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="contact">
-      <div class="container contact-card">
-        <div>
-          <h2>Let’s build something together</h2>
-          <p>If you have a project in mind or want to connect, send a message and I’ll reply soon.</p>
+    <!-- ░░ CERTIFICATIONS ░░ -->
+    <section class="section section-alt" id="certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// certifications</span>
+          <h2>Credentials</h2>
         </div>
-        <a class="button button-primary" href="mailto:hello@example.com">Email Me</a>
+        <div class="cert-grid">
+          <div class="cert-card reveal">
+            <div class="cert-glow"></div>
+            <div class="cert-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h3>AWS Solutions Architect</h3>
+            <p>Associate · Amazon Web Services</p>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-glow"></div>
+            <div class="cert-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <h3>DevOps Engineer Professional</h3>
+            <p>Professional Certification Course</p>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-glow"></div>
+            <div class="cert-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <h3>CCNA</h3>
+            <p>Cisco Certified Network Associate</p>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-glow"></div>
+            <div class="cert-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>MTA Python</h3>
+            <p>Microsoft Technology Associate</p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- ░░ EDUCATION ░░ -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// education</span>
+          <h2>Academic Background</h2>
+        </div>
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <span class="edu-period">Aug 2025 – Ongoing</span>
+            <h3>Ph.D, Computer Science &amp; Engineering</h3>
+            <p class="edu-uni">Lovely Professional University, India</p>
+            <span class="edu-grade">CGPA: 9.29 / 10</span>
+          </div>
+          <div class="edu-card reveal">
+            <span class="edu-period">Jun 2023 – Dec 2025</span>
+            <h3>M.S., Data Science</h3>
+            <p class="edu-uni">Chandigarh University, India</p>
+            <span class="edu-grade">CGPA: 8.14 / 10</span>
+          </div>
+          <div class="edu-card reveal">
+            <span class="edu-period">Dec 2023 – Dec 2024</span>
+            <h3>PG Diploma in Indian IP Laws</h3>
+            <p class="edu-uni">IGNOU, India</p>
+            <span class="edu-grade">Grade: A</span>
+          </div>
+          <div class="edu-card reveal">
+            <span class="edu-period">Jun 2021 – Dec 2023</span>
+            <h3>PG Diploma in Applied Statistics</h3>
+            <p class="edu-uni">IGNOU, India</p>
+            <span class="edu-grade">Grade: A</span>
+          </div>
+          <div class="edu-card reveal">
+            <span class="edu-period">Jul 2020 – Jun 2021</span>
+            <h3>PG Diploma in Financial Management</h3>
+            <p class="edu-uni">Mumbai University, India</p>
+            <span class="edu-grade">Percentile: 87%</span>
+          </div>
+          <div class="edu-card reveal">
+            <span class="edu-period">Aug 2016 – Oct 2020</span>
+            <h3>B.E., Computer Engineering</h3>
+            <p class="edu-uni">Mumbai University, India</p>
+            <span class="edu-grade">CGPA: 8.89 / 10</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ ACHIEVEMENTS ░░ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// achievements</span>
+          <h2>Recognition</h2>
+        </div>
+        <div class="achievement-grid">
+          <div class="achievement-card reveal">
+            <div class="ach-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
+            </div>
+            <div>
+              <h3>AWS Operational Excellence Award</h3>
+              <p>Winner — June 2023 &amp; February 2024 at Amazon Web Services</p>
+            </div>
+          </div>
+          <div class="achievement-card reveal">
+            <div class="ach-icon gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div>
+              <h3>Taekwondo Gold Medalist</h3>
+              <p>Mumbai Suburban District Championship</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CONTACT ░░ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// contact</span>
+          <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-wrapper">
+          <p class="contact-intro reveal">Open to <strong>Senior Engineering</strong>, <strong>Platform Engineering</strong>, and <strong>SRE leadership</strong> roles. Also happy to connect on research, consulting, or interesting DevOps challenges.</p>
+          <div class="contact-links">
+            <a class="contact-link reveal" href="mailto:work.paragkhuman@gmail.com">
+              <span class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <div>
+                <span class="cl-label">Email</span>
+                <span class="cl-value">work.paragkhuman@gmail.com</span>
+              </div>
+            </a>
+            <a class="contact-link reveal" href="https://www.linkedin.com/in/paragkhuman" target="_blank" rel="noopener">
+              <span class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </span>
+              <div>
+                <span class="cl-label">LinkedIn</span>
+                <span class="cl-value">linkedin.com/in/paragkhuman</span>
+              </div>
+            </a>
+            <a class="contact-link reveal" href="Parag_Khuman_Resume.pdf" target="_blank" rel="noopener">
+              <span class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </span>
+              <div>
+                <span class="cl-label">Resume</span>
+                <span class="cl-value">Download PDF ↗</span>
+              </div>
+            </a>
+            <a class="contact-link reveal" href="tel:+918419980735">
+              <span class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <div>
+                <span class="cl-label">Phone</span>
+                <span class="cl-value">+91-8419980735</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 Parag Khuman. Built for GitHub Pages.</p>
-      <p>Host your custom domain by editing <code>CNAME</code> and DNS records.</p>
+      <p class="footer-brand"><span class="prompt-char">~/</span>parag</p>
+      <p class="footer-copy">© 2026 Parag Khuman · Senior DevOps Engineer · Mumbai, India</p>
     </div>
   </footer>
 
