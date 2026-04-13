@@ -49,9 +49,13 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
 );
 
-document.querySelectorAll('.reveal, .reveal-delay').forEach(el => {
-  revealObserver.observe(el);
-});
+// Delay so the browser paints the initial opacity:0 state before we reveal
+// above-the-fold elements — without this the fade-in is invisible on load.
+setTimeout(() => {
+  document.querySelectorAll('.reveal, .reveal-delay').forEach(el => {
+    revealObserver.observe(el);
+  });
+}, 120);
 
 /* ── Counter animation ───────────────────────────────────── */
 const counterObserver = new IntersectionObserver(
@@ -74,7 +78,7 @@ const counterObserver = new IntersectionObserver(
       counterObserver.unobserve(el);
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.1 }  // lowered from 0.5 — inline spans have small bounding boxes
 );
 
 document.querySelectorAll('.stat-num[data-target]').forEach(el => {
